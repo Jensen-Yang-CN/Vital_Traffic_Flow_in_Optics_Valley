@@ -1,0 +1,47 @@
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# ==================== 训练产物 / 模型权重 ====================
+# 由 main.py 训练生成，体积大且可复现，不入库
+lightning_logs/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# ==================== 由脚本生成的数据中间产物 ====================
+# 可由 reTrain.py / view_npy.py 从 data/*.csv 与 guanggu_adj.npy 重新生成
+data/guanggu_speed.csv
+data/guanggu_adj.csv
+guanggu_adj.csv
+guanggu_speed.csv
+
+# ==================== 输出图片（可重新生成） ====================
+# 注意：node_3 / node_9 / node_10 三张实验图是论文引用图，已入库，不要忽略
+Guanggu_Resilience_Triangle_Official.png
+Guanggu_Resilience_Ranking_Official.png
+guanggu_cascade_comparison_Official.png
+Control_Optimization_Curve.png
+
+# ==================== IDE / 编辑器 ====================
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ==================== 操作系统 ====================
+.DS_Store
+Thumbs.db
+
+# ==================== 密钥与本地配置 ====================
+# 切勿把真实 API Key / Token 提交上去
+.env
+.env.local
+config.local.*
